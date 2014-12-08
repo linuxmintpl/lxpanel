@@ -1,20 +1,6 @@
-etc/xdg
+debian/desktop/*	usr/share/applications
+etc/xdg/lxpanel
 usr/bin
+usr/lib
 usr/include
-usr/lib/*/pkgconfig
-usr/lib/*/lxpanel/plugins/batt.so
-usr/lib/*/lxpanel/plugins/cpu.so
-usr/lib/*/lxpanel/plugins/cpufreq.so
-usr/lib/*/lxpanel/plugins/deskno.so
-usr/lib/*/lxpanel/plugins/kbled.so
-usr/lib/*/lxpanel/plugins/netstatus.so
-usr/lib/*/lxpanel/plugins/thermal.so
-usr/lib/*/lxpanel/plugins/volumealsa.so
-usr/lib/*/lxpanel/plugins/xkb.so
-usr/lib/*/lxpanel/plugins/monitors.so
-usr/lib/*/lxpanel/plugins/netstat.so
-usr/lib/*/lxpanel/plugins/weather.so
 usr/share/man
-
-debian/desktop/*	/usr/share/applications
-debian/local/source_lxpanel.py usr/share/apport/package-hooks

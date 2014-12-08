@@ -1,36 +1,17 @@
-lxpanel (0.7.2-1ubuntu2) vivid; urgency=medium
+lxpanel (0.8.0-2) experimental; urgency=low
 
-  * debian/lxpanel.install
-   - Don't install /usr/share/locale and /usr/share/lxpanel, already installed
-     in lxpanel-data (LP: #1417244).
-  * debian/control:
-   - Update Replaces and Breaks.
+  * Adding [linux-any] for libasound2-dev to fix FTBFS on non-linux.
 
- -- Julien Lavergne <gilir@ubuntu.com>  Tue, 03 Feb 2015 19:43:11 +0100
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Mon, 08 Dec 2014 16:49:41 +0200
 
-lxpanel (0.7.2-1ubuntu1) vivid; urgency=medium
+lxpanel (0.8.0-1) experimental; urgency=low
 
-  * Merge with Debian. Ubuntu remaining changes:
-  * debian/control:
-   - Add libindicator-dev build-depends.
-   - Add a recommend on xterm | pavucontrol | gnome-alsamixer to enable the
-     mixer on the sound applet. (LP: #957749).
-   - Add indicator plugin binary.
-   - Add build-depends on libicu-dev for weather plugin.
-  * debian/local/source_lxpanel.py:
-   - Add apport hook.
-  * debian/lxpanel.install:
-   - Install all files except indicators.
-  * debian/lxpanel-indicator-applet-plugin.install:
-   - Install indicator plugin.
-  * debian/rules:
-   - Add --enable-indicator-support flag.
-   - Add dh_install --fail-missing.
-  * debian/patches:
-   - 04_disable_gtk3_indicators.patch: Hide incompatible indicators in the
-     preference menu (LP: #1165245).
+  * Merging upstream version 0.8.0 (Closes: #639729, #761971).
+  * Adding override_dh_auto_install rule to remove unused .la file.
+  * Adding libkeybinder-dev as build dependency.
+  * Disabling dh_makeshlibs for the private library as well.
 
- -- Julien Lavergne <gilir@ubuntu.com>  Sat, 31 Jan 2015 15:30:45 +0100
+ -- Andriy Grytsenko <andrej@rep.kiev.ua>  Mon, 08 Dec 2014 13:00:33 +0200
 
 lxpanel (0.7.2-1) unstable; urgency=low
 
@@ -83,53 +64,6 @@ lxpanel (0.7.0-1) unstable; urgency=low
 
  -- Andriy Grytsenko <andrej@rep.kiev.ua>  Sat, 23 Aug 2014 03:38:31 +0300
 
-lxpanel (0.6.2-0ubuntu2) utopic; urgency=medium
-
-  [ Unit 193 ]
-  * Include development files missing in prior uploads. (LP: #1361459)
-  * override dh_install to enable --list-missing.
-
-  [ Julien Lavergne ]
-  * debian/rules:
-   - Force dh_install --fail-missing.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 31 Aug 2014 16:28:04 +0200
-
-lxpanel (0.6.2-0ubuntu1) utopic; urgency=medium
-
-  * New upstream release.
-
- -- Jackson Doak <noskcaj@ubuntu.com>  Tue, 27 May 2014 09:12:41 +1000
-
-lxpanel (0.6.1-0ubuntu3) trusty; urgency=medium
-
-  * Reverted the changes in 0.6.1-0ubuntu2 as a preventative measure. Removing
-    gettext macros can apparently break translations.
-  * Doing a manual libtool update instead to fix FTBFS on ppc64el.
-
- -- Logan Rosen <logan@ubuntu.com>  Thu, 30 Jan 2014 22:32:55 -0500
-
-lxpanel (0.6.1-0ubuntu2) trusty; urgency=medium
-
-  * Use dh-autoreconf to get new libtool macros for ppc64el.
-  * Remove gettext macros to make sure libtoolize creates po/Makefile.in.in.
-
- -- Logan Rosen <logan@ubuntu.com>  Sat, 25 Jan 2014 02:29:07 -0500
-
-lxpanel (0.6.1-0ubuntu1) saucy; urgency=low
-
-  * New upstream release (bug fixes, and translation updates).
-
- -- Julien Lavergne <gilir@ubuntu.com>  Fri, 13 Sep 2013 18:08:02 +0200
-
-lxpanel (0.6.0-0ubuntu1) saucy; urgency=low
-
-  * New upstream release.
-  * debian/lxpanel.docs:
-   - Remove TODO, since it's not in the sources anymore.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 29 Aug 2013 01:07:11 +0200
-
 lxpanel (0.5.12-3) unstable; urgency=low
 
   * Revert fix_gtk_main.diff. (Closes:#720109)
@@ -169,79 +103,6 @@ lxpanel (0.5.12-1) unstable; urgency=low
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Thu, 08 Aug 2013 00:07:17 +0800
 
-lxpanel (0.5.12-0ubuntu3) saucy; urgency=low
-
-  * No change, rebuild for menu-cache transition. 
-
- -- Julien Lavergne <gilir@ubuntu.com>  Tue, 09 Jul 2013 23:21:36 +0200
-
-lxpanel (0.5.12-0ubuntu2) raring; urgency=low
-
-  * debian/patches:
-   - 04_disable_gtk3_indicators.patch: Hide incompatible indicators in the
-     preference menu (LP: #1165245).
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sat, 13 Apr 2013 09:02:25 +0200
-
-lxpanel (0.5.12-0ubuntu1) raring; urgency=low
-
-  * New upstream release.
-  * debian/rules:
-   - Remove autoreconf, not needed for a stable release.
-   - Run the tests again.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Tue, 15 Jan 2013 20:49:04 +0100
-
-lxpanel (0.5.10+git20121126-0ubuntu1) raring; urgency=low
-
-  * New upstream snapshot.
-  * debian/control:
-   - Build-depends on libmenu-cache-dev to follow the name change.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 03 Jan 2013 19:49:15 +0100
-
-lxpanel (0.5.10+git20120823-0ubuntu1) quantal; urgency=low
-
-  * New upstream snapshot.
-   - Lxpanel doesn't use monochrome Keyboard LED indicators (LP: #1016014)
-  * debian/control:
-   - Build-depend on libgtk2.0-dev (>= 2.16).
-
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 23 Aug 2012 00:46:05 +0200
-
-lxpanel (0.5.10-1ubuntu2) quantal; urgency=low
-
-  * debian/patches: Refresh all patches.
-
-  [ Matthieu Baerts (matttbe) ]
-  * debian/local/source_lxpanel.py:
-   - Update apport hook for python3 ; thanks to Edward Donovan (LP: #1013171) 
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 15 Jul 2012 13:00:20 +0200
-
-lxpanel (0.5.10-1ubuntu1) quantal; urgency=low
-
-  * debian/control:
-   - Add libindicator-dev build-depends.
-   - Add a recommend on xterm | pavucontrol | gnome-alsamixer to enable the
-    mixer on the sound applet.
-   - Add indicator plugin binary.
-  * debian/local/source_lxpanel.py:
-   - Add apport hook.
-  * debian/lxpanel.install:
-   - Install all files except indicators.
-   - Install apport hook.
-  * debian/lxpanel-indicator-applet-plugin.install:
-   - Install indicator plugin.
-  * debian/rules:
-   - Add --enable-indicator-support flag.
-   - Remove override for dh_install.
-  * debian/copyright:
-   - Update copyright for xkb plugin.
-   - Update copyright for indicator plugin.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Wed, 13 Jun 2012 23:16:29 +0200
-
 lxpanel (0.5.10-1) unstable; urgency=low
 
   * Merging upstream version 0.5.10.
@@ -255,31 +116,6 @@ lxpanel (0.5.9-4) unstable; urgency=low
   * Adding debug package.
 
  -- Daniel Baumann <daniel@debian.org>  Fri, 18 May 2012 19:47:56 +0200
-
-lxpanel (0.5.9-3ubuntu1) quantal; urgency=low
-
-  * Merge from Debian, Ubuntu remaining changes :
-  * debian/control:
-   - Add libindicator-dev build-depends.
-   - Add a recommend on xterm | pavucontrol | gnome-alsamixer to enable the
-     mixer on the sound applet. (LP: #957749)
-   - Add indicator plugin binary.
-   - Add a debug package.
-  * debian/local/source_lxpanel.py:
-   - Add apport hook.
-  * debian/lxpanel.install:
-   - Install all files except indicators.
-  * debian/lxpanel-indicator-applet-plugin.install:
-   - Install indicator plugin.
-  * debian/rules:
-   - Install apport hook only on Ubuntu.
-   - Add override for dh_strip.
-   - Add --enable-indicator-support flag.
-  * debian/copyright:
-   - Update copyright for xkb plugin.
-   - Update copyright for indicator plugin.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Fri, 04 May 2012 19:33:50 +0200
 
 lxpanel (0.5.9-3) unstable; urgency=low
 
@@ -308,50 +144,6 @@ lxpanel (0.5.9-1) unstable; urgency=low
     upstream later on.
 
  -- Daniel Baumann <daniel@debian.org>  Fri, 20 Apr 2012 17:01:48 +0200
-
-lxpanel (0.5.8+git20120212-0ubuntu3) precise; urgency=low
-
-  * debian/control:
-   - Add a recommend on xterm | pavucontrol | gnome-alsamixer to enable the
-     mixer on the sound applet. (LP: #957749)
-
- -- Julien Lavergne <gilir@ubuntu.com>  Fri, 30 Mar 2012 00:51:14 +0200
-
-lxpanel (0.5.8+git20120212-0ubuntu2) precise; urgency=low
-
-  * debian/patches:
-   - 01_volume_use_panel_icon.patch: From upstream, use *-panel icon for volume
-     applet if it's available in the theme.
-   - 02_fix_focus_pref_dialog.patch: From upstream, fix application launch bar
-     settings are never on top (LP: #418119)
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 04 Mar 2012 00:34:46 +0100
-
-lxpanel (0.5.8+git20120212-0ubuntu1) precise; urgency=low
-
-  * New upstream snapshot
-   - Run dialog opens up in the background (LP: #889414)
-   - Abiliy to configure task Bar Font (LP: #690662)
-   - Volume applet uses wrong icon (LP: #878117)
-   - Add ability for lxpanel sound applet to launch a GUI for sound management
-     (LP: #692276)
-   - lxpanel indicator support can't be configured (LP: #692260)
-   - Task Bar (Window List) - Options on 64bit version are different than 32bit
-     version (LP: #909127)
-  * debian/patches
-   - indicator-support.patch: Remove, merged upstream.
-   - fix_indicator_dir.patch: Remove, merged upstream.
-   - fix_position.patch: Remove, merged upstream.
-   - missing_glades.patch: Remove, fixed upstream.
-   - default-config.patch: Refresh.
-   - configure_desktop_number.patch: Refresh.
-   - 99_refresh_autotools.patch: Refresh.
-  * debian/control:
-   - Build-depends on libwnck-dev.
-  * debian/lxpanel.install:
-   - Add new plugins.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Mon, 13 Feb 2012 23:40:40 +0100
 
 lxpanel (0.5.8-3) unstable; urgency=low
 
@@ -412,60 +204,6 @@ lxpanel (0.5.8-1.1) unstable; urgency=low
     configure. (Closes: #658001)
 
  -- Sébastien Villemot <sebastien.villemot@ens.fr>  Sat, 18 Feb 2012 17:19:17 +0100
-
-lxpanel (0.5.8-1ubuntu4) precise; urgency=low
-
-  * no change rebuild for libindicator7
-
- -- Ken VanDine <ken.vandine@canonical.com>  Wed, 25 Jan 2012 10:08:24 -0500
-
-lxpanel (0.5.8-1ubuntu3) oneiric; urgency=low
-
-  * debian/patches/fix_position.patch:
-   - Fix position of the menu (LP: #818869).
-
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 06 Oct 2011 00:56:02 +0200
-
-lxpanel (0.5.8-1ubuntu2) oneiric; urgency=low
-
-  * debian/control:
-   - Suggests indicator-*gtk2, original names are indicators build with gtk3.
-   - Provides indicator-render instead of indicator-applet.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Wed, 07 Sep 2011 01:33:41 +0200
-
-lxpanel (0.5.8-1ubuntu1) oneiric; urgency=low
-
-  [ Jason Conti ]
-  * debian/patches/fix-indicator-dir.patch:
-    - Update paths for the indicators in configure.ac. (LP: #819528)
-
-  [ Julien Lavergne ]
-  * Merge from Debian unstable. Ubuntu remaining changes :
-    - debian/local/source_lxpanel.py:
-      + Add apport hook.
-    - debian/control:
-      + Wrap depends and build-depends.
-      + Add libindicator-dev build-depends.
-      + New lxpanel-indicator-applet-plugin binary.
-      + Add a debug package.
-    - debian/copyright:
-      + Update with indicator-support.patch.
-      + Update copyright for xkb plugin.
-    - debian/lxpanel.install:
-     + Install all files except indicators.
-    - debian/lxpanel-indicator-applet-plugin.install:
-      + Install indicator plugin.
-    - debian/patches:
-      + indicator-support.patch: Add indicator support.
-      + 99_refresh_autotools.patch: Refresh build system.
-    - debian/rules:
-      + Install apport hook only on Ubuntu.
-      + Add override for dh_strip.
-      + Add --enable-indicator-support flag.
-      + Add --fail-missing to dh_install.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Tue, 16 Aug 2011 20:45:47 +0200
 
 lxpanel (0.5.8-1) unstable; urgency=low
 
@@ -528,90 +266,6 @@ lxpanel (0.5.7-1) unstable; urgency=low
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Fri, 29 Jul 2011 18:22:30 +0800
 
-lxpanel (0.5.7-0ubuntu1) oneiric; urgency=low
-
-  * New upstream release.
-  * debian/patches:
-   - 80_translations.patch: Remove, merged upstream.
-   - batt_status.patch: Remove, merged upstream.
-   - configure_X11.patch: Remove, merged upstream.
-   - missing_glades.patch: Remove, not needed now.
-   - redefine-alarm-variable.patch: Remove, merged upstream.
-   - indicator-support.patch: Fix Makefile.am.
-   - fix_requisition.patch: New patch, fix crash when clicking on the panel.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 24 Jul 2011 15:41:01 +0200
-
-lxpanel (0.5.6-1ubuntu5) oneiric; urgency=low
-
-  * debian/patches/indicator-support.patch:
-   - Update location of the .pc to fix FTBFS.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Fri, 15 Jul 2011 19:30:07 +0200
-
-lxpanel (0.5.6-1ubuntu4) natty; urgency=low
-
-  * debian/patches
-   - 80_translations.patch: Update translations from upstream git (2011-02-22)
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 27 Feb 2011 23:49:37 +0100
-
-lxpanel (0.5.6-1ubuntu3) natty; urgency=low
-
-  * debian/control
-    - Bump build-depends for libindicator-dev to >= 0.3.19
-
- -- Ken VanDine <ken.vandine@canonical.com>  Thu, 17 Feb 2011 16:32:42 -0500
-
-lxpanel (0.5.6-1ubuntu2) natty; urgency=low
-
-  * No change rebuild against current libindicator
-
- -- Bhavani Shankar <bhavi@ubuntu.com>  Fri, 14 Jan 2011 12:19:25 +0530
-
-lxpanel (0.5.6-1ubuntu1) natty; urgency=low
-
-  * Merge from debian unstable.  Remaining changes:
-    - debian/apport/source_lxpanel.py:
-      + Add apport hook.
-    - debian/control:
-      + Wrap depends and build-depends.
-      + Add libindicator-dev build-depends.
-      + New lxpanel-indicator-applet-plugin binary.
-      + Build-depends on lsb-release, needed to detect the distribution.
-      + Add a debug package.
-    - debian/copyright:
-      + Update with indicator-support.patch.
-      + Update copyright for xkb plugin.
-    - debian/dirs: Removed.
-    - debian/lxpanel-indicator-applet-plugin.install:
-      + Install indicator plugin.
-    - debian/lxpanel.install:
-      + Install all files except indicator plugin.
-    - debian/patches/configure_X11.patch:
-      + Add X11 to the linker to fix FTBFS with DSO. (Closes: #608419)
-    - debian/patches/configure_desktop_number.patch: (Closes: #608421)
-      + Add configuration for desktop number for the pager plugin.
-    - debian/patches/indicator-support.patch:
-      + Add indicator support.
-    - debian/rules:
-      + Install apport hook only on Ubuntu.
-      + Add override for dh_strip.
-      + Add --enable-indicator-support flag.
-      + Add --fail-missing to dh_install.
-  * debian/control:
-    - Build-Depends on autopoint and dh-autoreconf.
-    - wrap-and-sort, get it professionally.
-  * debian/rules: Build-Depends on autopoint and dh_autoreconf.
-    - Use dh $@ --with autoreconf to refresh configure and Makefile.
-  * Dropped changes:
-    - debian/patches/redefine-alarm-variable.patch:
-      + Superceded by Debian.
-    - debian/patches/99-autotools.patch:
-      + Use debian/rules for it.
-
- -- Artur Rona <ari-tczew@ubuntu.com>  Fri, 07 Jan 2011 03:19:29 +0100
-
 lxpanel (0.5.6-1) unstable; urgency=low
 
   * New upstream release (Closes:#555575, #577599, #581980)
@@ -660,82 +314,6 @@ lxpanel (0.5.6-1) unstable; urgency=low
   * Bumped Standard-version to 3.9.1
 
  -- Andrew Lee (李健秋) <ajqlee@debian.org>  Wed, 28 Jul 2010 16:12:08 -0400
-
-lxpanel (0.5.6-0ubuntu3) natty; urgency=low
-
-  * debian/patches/
-   - configure_desktop_number.patch : Add configuration for desktop number for
-     the pager plugin.
-   - configure_X11.patch: Add X11 to the linker to fix FTBFS with DSO.
-   - 99-autotools.patch: Refresh.
-  * debian/control:
-   - Add a debug package.
-   - Wrap depends and build-depends.
-  * debian/rules:
-   - Add override for dh_strip.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Sun, 28 Nov 2010 11:59:55 +0100
-
-lxpanel (0.5.6-0ubuntu2) maverick; urgency=low
-
-  * debian/apport/source_lxpanel.py
-   - Add apport hook.
-  * debian/rules
-   - Install apport hook only on Ubuntu.
-  * debian/control:
-   - Build-depends on lsb-release, needed to detect the distribution.
-   - Build-depends on libindicator-dev (>= 0.3.14) to rebuild on lastest
-     libindicator. (LP: #637692).
-
- -- Julien Lavergne <gilir@ubuntu.com>  Thu, 23 Sep 2010 23:48:30 +0200
-
-lxpanel (0.5.6-0ubuntu1) maverick; urgency=low
-
-  * New upstream release.
-  * debian/copyright:
-   - Update copyright for xkb plugin.
-  * debian/patches:
-   - sort_dirmenu.patch: disable, merged upstream.
-   - kbled.patch: disable, merged upstream.
-   - panel_draw_label_text.patch: disable, merged upstream.
-   - libtool-fix.patch: disable, merged upstream.
-   - g_locale_to_utf8.patch: disable, merged upstream.
-   - 99-autotools.patch: refresh.
-   - redefine-alarm-variable.patch: Use upstream fix.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Fri, 23 Jul 2010 21:48:25 +0200
-
-lxpanel (0.5.5-4ubuntu2) maverick; urgency=low
-
-  * Indicator support upload. LP: #500053
-  * debian/patches/
-   - indicator-support.patch: Add indicator support.
-   - 99-autotools.patch: refresh configure and Makefile.
-  * debian/control: 
-   - Add libindicator-dev build-depends.
-   - New lxpanel-indicator-applet-plugin binary.
-   - Provide indicator-applet.
-  * debian/rules: 
-   - Add --enable-indicator-support flag.
-   - Add --fail-missing to dh_install.
-  * debian/lxpanel.install:
-   - Install all files except indicator plugin.
-  * debian/lxpanel-indicator-applet-plugin.install:
-   - Install indicator plugin.
-  * debian/dirs: 
-   - Removed.
-  * debian/copyright: Update with indicator-support.patch.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Mon, 14 Jun 2010 23:07:32 +0200
-
-lxpanel (0.5.5-4ubuntu1) maverick; urgency=low
-
-  * Sync with Debian unstable.
-  * Ubuntu remaining changes:
-    - debian/patches/redefine-alarm-variable.patch: Rename alarm struct to fix
-      FTBFS.
-
- -- Julien Lavergne <gilir@ubuntu.com>  Wed, 26 May 2010 23:13:37 +0200
 
 lxpanel (0.5.5-4) unstable; urgency=high
 
