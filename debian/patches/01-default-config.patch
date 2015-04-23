@@ -1,10 +1,11 @@
 Author: Andrew Lee (李健秋) <ajqlee@debian.org>
 Description: Change default terminal and browser.
 
-diff -Naurp lxpanel.orig/data/default/panels/panel.in lxpanel/data/default/panels/panel.in
---- lxpanel.orig/data/default/panels/panel.in	2011-07-29 14:37:01.000000000 +0200
-+++ lxpanel/data/default/panels/panel.in	2012-04-20 14:36:55.535074244 +0200
-@@ -53,10 +53,10 @@ Plugin {
+Index: lxpanel-0.7.2/data/default/panels/panel.in
+===================================================================
+--- lxpanel-0.7.2.orig/data/default/panels/panel.in	2015-01-31 15:49:37.585637050 +0100
++++ lxpanel-0.7.2/data/default/panels/panel.in	2015-01-31 15:49:37.577637274 +0100
+@@ -55,10 +55,10 @@
              id=pcmanfm.desktop
          }
          Button {

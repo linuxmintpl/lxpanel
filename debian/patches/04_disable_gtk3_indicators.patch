@@ -1,0 +1,18 @@
+Index: lxpanel-0.7.2/plugins/indicator/indicator.c
+===================================================================
+--- lxpanel-0.7.2.orig/plugins/indicator/indicator.c	2015-01-31 15:54:03.274331483 +0100
++++ lxpanel-0.7.2/plugins/indicator/indicator.c	2015-01-31 15:54:03.266331699 +0100
+@@ -863,10 +863,13 @@
+     GtkWidget * dlg = lxpanel_generic_config_dlg(_("Indicator applets"),
+         panel, indicator_apply_configuration, p,
+         _("Indicator Applications"), &indicator->applications, CONF_TYPE_BOOL,
++/* Disable configuration of indicator which are not gtk2.
++Currently only application and sounds are supported 
+         _("Clock Indicator"), &indicator->datetime, CONF_TYPE_BOOL,
+         _("Messaging Menu"), &indicator->messages, CONF_TYPE_BOOL,
+         _("Network Menu"), &indicator->network, CONF_TYPE_BOOL,
+         _("Session Menu"), &indicator->session, CONF_TYPE_BOOL,
++*/
+         _("Sound Menu"), &indicator->sound, CONF_TYPE_BOOL,
+         /* _("Applications menus"), &indicator->appmenu, CONF_TYPE_BOOL,*/
+         NULL);
