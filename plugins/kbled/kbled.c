@@ -21,7 +21,6 @@
 #endif
 
 #include "plugin.h"
-#include "misc.h"
 
 #include <gtk/gtk.h>
 #include <gdk/gdk.h>
@@ -46,11 +45,24 @@ static const char * off_icons_theme[] = {
     "scrllock-off"
 };
 
+static const char * on_icons[] = {
+    "capslock-on.png",
+    "numlock-on.png",
+    "scrllock-on.png"
+};
+
+static const char * off_icons[] = {
+    "capslock-off.png",
+    "numlock-off.png",
+    "scrllock-off.png"
+};
+
 static int xkb_event_base = 0;
 static int xkb_error_base = 0;
 
 /* Private context for keyboard LED plugin. */
 typedef struct {
+    LXPanel * panel;				/* Back pointer to panel */
     config_setting_t *settings;
     GtkWidget *indicator_image[3];		/* Image for each indicator */
     unsigned int current_state;			/* Current LED state, bit encoded */
@@ -61,12 +73,27 @@ static void kbled_update_image(KeyboardLEDPlugin * kl, int i, unsigned int state
 static void kbled_update_display(KeyboardLEDPlugin * kl, unsigned int state);
 static void kbled_destructor(gpointer user_data);
 
+static void kbled_theme_changed(GtkWidget * widget, KeyboardLEDPlugin * kl)
+{
+    /* Set orientation into the icon grid. */
+
+    /* Do a full redraw. */
+    int current_state = kl->current_state;
+    kl->current_state = ~ kl->current_state;
+    kbled_update_display(kl, current_state);
+}
+
 /* Update image to correspond to current state. */
 static void kbled_update_image(KeyboardLEDPlugin * kl, int i, unsigned int state)
 {
-    lxpanel_image_change_icon(kl->indicator_image[i],
-                              (state ? on_icons_theme[i] : off_icons_theme[i]),
-                              NULL);
+    if(lxpanel_image_set_icon_theme(kl->panel, kl->indicator_image[i], (state ? on_icons_theme[i] : off_icons_theme[i])) != TRUE) {
+        char * file = g_build_filename(
+            PACKAGE_DATA_DIR "/images",
+            ((state) ? on_icons[i] : off_icons[i]),
+            NULL);
+        lxpanel_image_set_from_file(kl->panel, kl->indicator_image[i], file);
+        g_free(file);
+    }
 }
 
 /* Redraw after Xkb event or initialization. */
@@ -110,6 +137,7 @@ static GtkWidget *kbled_constructor(LXPanel *panel, config_setting_t *settings)
     unsigned int current_state;
     Display *xdisplay = GDK_DISPLAY_XDISPLAY(gdk_display_get_default());
 
+    kl->panel = panel;
     kl->settings = settings;
     kl->visible[0] = FALSE;
     kl->visible[1] = TRUE;
@@ -129,11 +157,13 @@ static GtkWidget *kbled_constructor(LXPanel *panel, config_setting_t *settings)
                             panel_get_icon_size(panel),
                             0, 0, panel_get_height(panel));
     lxpanel_plugin_set_data(p, kl, kbled_destructor);
+    gtk_widget_add_events(p, GDK_BUTTON_PRESS_MASK);
+    g_signal_connect(panel_get_icon_theme(panel), "changed", G_CALLBACK(kbled_theme_changed), kl);
 
     /* Then allocate three images for the three indications, but make them visible only when the configuration requests. */
     for (i = 0; i < 3; i++)
     {
-        kl->indicator_image[i] = lxpanel_image_new_for_icon(panel, off_icons_theme[i], -1, NULL);
+        kl->indicator_image[i] = gtk_image_new();
         gtk_container_add(GTK_CONTAINER(p), kl->indicator_image[i]);
         gtk_widget_set_visible(kl->indicator_image[i], kl->visible[i]);
     }
@@ -172,6 +202,8 @@ static void kbled_destructor(gpointer user_data)
 
     /* Remove GDK event filter. */
     gdk_window_remove_filter(NULL, (GdkFilterFunc) kbled_event_filter, kl);
+    g_signal_handlers_disconnect_by_func(panel_get_icon_theme(kl->panel),
+                                         kbled_theme_changed, kl);
     g_free(kl);
 }
 

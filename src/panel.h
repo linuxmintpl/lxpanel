@@ -24,19 +24,6 @@
 
 G_BEGIN_DECLS
 
-/**
- * LXPANEL_CHECK_VERSION
- *
- * A simple macro for plugins to check features.
- *
- * Since: 0.8.0
- */
-#define LXPANEL_CHECK_VERSION(_a,_b,_c) \
-    (0 > _a || \
-    (0 == _a && 8 > _b) || \
-    (0 == _a && 8 == _b && 0 >= _c))
-
-
 #define LX_TYPE_PANEL                  (lxpanel_get_type())
 #define LXPANEL(obj)                   (G_TYPE_CHECK_INSTANCE_CAST((obj), \
                                         LX_TYPE_PANEL, LXPanel))
@@ -64,8 +51,6 @@ struct _LXPanel
 struct _LXPanelClass
 {
     GtkWindowClass parent_class;
-    void (*icon_size_changed)(LXPanel *panel);
-    void (*panel_font_changed)(LXPanel *panel);
 };
 
 /**
@@ -91,6 +76,28 @@ extern void panel_apply_icon(GtkWindow *w);
 extern void lxpanel_draw_label_text(LXPanel * p, GtkWidget * label, const char * text,
                                     gboolean bold, float custom_size_factor,
                                     gboolean custom_color);
+
+/**
+ * lxpanel_image_set_from_file
+ * @p: a panel instance
+ * @image: a #GtkImage widget
+ * @file: image file path
+ *
+ * Applies icon from @file to @image in accordance with icon size setting
+ * on panel @p.
+ */
+extern void lxpanel_image_set_from_file(LXPanel * p, GtkWidget * image, const char * file);
+
+/**
+ * lxpanel_image_set_icon_theme
+ * @p: a panel instance
+ * @image: a #GtkImage widget
+ * @icon: icon name
+ *
+ * Applies icon size and theme from settings of @p to @image using @icon
+ * name to select icon.
+ */
+extern gboolean lxpanel_image_set_icon_theme(LXPanel * p, GtkWidget * image, const gchar * icon);
 
 /**
  * lxpanel_config_save

@@ -27,7 +27,6 @@
 #include "lxnm_client.h"
 #include "wireless.h"
 #include "passwd_gui.h"
-#include "gtk-compat.h"
 
 struct passwd_resp {
     ap_setting *aps;

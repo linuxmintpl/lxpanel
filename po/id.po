@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lxpanel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-21 21:13+0200\n"
-"PO-Revision-Date: 2014-12-05 08:58+0000\n"
+"POT-Creation-Date: 2014-08-20 13:56+0300\n"
+"PO-Revision-Date: 2014-08-26 11:17+0000\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <translation-team-id@lists.sourceforge.net>\n"
 "Language: id\n"
@@ -16,54 +16,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.6.0-rc2\n"
-"X-POOTLE-MTIME: 1417769938.000000\n"
+"X-Generator: Pootle 2.6.0-rc1\n"
+"X-POOTLE-MTIME: 1409051860.000000\n"
 
-#: ../src/configurator.c:135
-msgid ""
-"Space reservation is not available for this panel because there is another "
-"monitor beyond this edge and reservation would cover it if enabled."
-msgstr ""
-"Pemesanan ruang tak tersedia bagi panel ini karena ada monitor lain di luar "
-"tepi ini dan pemesanan akan menutupinya bila itu difungsikan."
+#. { "configure", N_("Preferences"), configure },
+#: ../src/configurator.c:50 ../src/gtk-run.c:373 ../plugins/menu.c:749
+msgid "Run"
+msgstr "Jalankan"
 
-#: ../src/configurator.c:605
+#: ../src/configurator.c:51 ../plugins/menu.c:750
+msgid "Restart"
+msgstr "Start Ulang"
+
+#: ../src/configurator.c:52 ../plugins/menu.c:751
+msgid "Logout"
+msgstr "Log keluar"
+
+#: ../src/configurator.c:558
 msgid "Currently loaded plugins"
 msgstr "Plugin yang kini dimuat"
 
-#: ../src/configurator.c:614
+#: ../src/configurator.c:567
 msgid "Stretch"
 msgstr "Regangkan"
 
-#: ../src/configurator.c:749
+#: ../src/configurator.c:689
 msgid "Add plugin to panel"
 msgstr "Tambah plugin ke panel"
 
-#: ../src/configurator.c:777
+#: ../src/configurator.c:717
 msgid "Available plugins"
 msgstr "Plugin tersedia"
 
-#: ../src/configurator.c:1357
+#: ../src/configurator.c:1255
 msgid "Logout command is not set"
 msgstr "Perintah keluar tidak diatur"
 
-#: ../src/configurator.c:1425
+#: ../src/configurator.c:1323
 msgid "Select a directory"
 msgstr "Pilih direktori"
 
-#: ../src/configurator.c:1425 ../src/configurator.c:1540
+#: ../src/configurator.c:1323 ../src/configurator.c:1441
 msgid "Select a file"
 msgstr "Pilih berkas"
 
-#: ../src/configurator.c:1573
+#: ../src/configurator.c:1468
 msgid "_Browse"
 msgstr "Ram_ban"
 
-#: ../src/panel.c:981
+#: ../src/panel.c:926
 msgid "There is no room for another panel. All the edges are taken."
 msgstr "Tak ada ruang bagi panel lain. Semua tepi telah terpakai."
 
-#: ../src/panel.c:1007
+#: ../src/panel.c:951
 msgid ""
 "Really delete this panel?\n"
 "<b>Warning: This can not be recovered.</b>"
@@ -71,150 +76,129 @@ msgstr ""
 "Yakin hapus panel ini?\n"
 "<b>Peringatan: Ini tak dapat dikembalikan.</b>"
 
-#: ../src/panel.c:1009
+#: ../src/panel.c:953
 msgid "Confirm"
 msgstr "Konfirmasi"
 
 #. TRANSLATORS: Replace this string with your names, one name per line.
-#: ../src/panel.c:1044
+#: ../src/panel.c:988
 msgid "translator-credits"
 msgstr "Andika Triwidada <andika@gmail.com>, 2010, 2013"
 
-#: ../src/panel.c:1049
+#: ../src/panel.c:993
 msgid "LXPanel"
 msgstr "LXPanel"
 
-#: ../src/panel.c:1067
+#: ../src/panel.c:1011
 msgid "Copyright (C) 2008-2014"
 msgstr "Hak Cipta (C) 2008-2014"
 
-#: ../src/panel.c:1068
+#: ../src/panel.c:1012
 msgid "Desktop panel for LXDE project"
 msgstr "Panel desktop untuk projek LXDE"
 
-#: ../src/panel.c:1110
+#: ../src/panel.c:1054
 #, c-format
 msgid "\"%s\" Settings"
 msgstr "Pengaturan \"%s\""
 
-#: ../src/panel.c:1130
+#: ../src/panel.c:1074
 msgid "Add / Remove Panel Items"
 msgstr "Tambah / Hapus Item Panel"
 
-#: ../src/panel.c:1138
+#: ../src/panel.c:1082
 #, c-format
 msgid "Remove \"%s\" From Panel"
 msgstr "Hapus \"%s\" Dari Panel"
 
-#: ../src/panel.c:1150
+#: ../src/panel.c:1094
 msgid "Panel Settings"
 msgstr "Pengaturan Panel"
 
-#: ../src/panel.c:1156
+#: ../src/panel.c:1100
 msgid "Create New Panel"
 msgstr "Buat Panel Baru"
 
-#: ../src/panel.c:1162
+#: ../src/panel.c:1106
 msgid "Delete This Panel"
 msgstr "Hapus Panel Ini"
 
-#: ../src/panel.c:1173
+#: ../src/panel.c:1117
 msgid "About"
 msgstr "Tentang"
 
-#: ../src/panel.c:1180
+#: ../src/panel.c:1124
 msgid "Panel"
 msgstr "Panel"
 
-#: ../src/panel.c:1391 ../src/panel.c:1399 ../data/ui/panel-pref.glade.h:22
+#: ../src/panel.c:1309 ../src/panel.c:1317 ../data/ui/panel-pref.glade.h:22
 msgid "Height:"
 msgstr "Tinggi:"
 
-#: ../src/panel.c:1392 ../src/panel.c:1398 ../data/ui/panel-pref.glade.h:21
+#: ../src/panel.c:1310 ../src/panel.c:1316 ../data/ui/panel-pref.glade.h:21
 msgid "Width:"
 msgstr "Lebar:"
 
-#: ../src/panel.c:1393 ../data/ui/panel-pref.glade.h:13
+#: ../src/panel.c:1311 ../data/ui/panel-pref.glade.h:13
 msgid "Left"
 msgstr "Kiri"
 
-#: ../src/panel.c:1394 ../data/ui/panel-pref.glade.h:14
+#: ../src/panel.c:1312 ../data/ui/panel-pref.glade.h:14
 msgid "Right"
 msgstr "Kanan"
 
-#: ../src/panel.c:1400 ../data/ui/panel-pref.glade.h:12
+#: ../src/panel.c:1318 ../data/ui/panel-pref.glade.h:12
 msgid "Top"
 msgstr "Atas"
 
-#: ../src/panel.c:1401 ../data/ui/panel-pref.glade.h:11
+#: ../src/panel.c:1319 ../data/ui/panel-pref.glade.h:11
 msgid "Bottom"
 msgstr "Bawah"
 
-#: ../src/plugin.c:340
-msgid "No file manager is configured."
-msgstr "Tak ada manajer berkas yang ditata."
-
-#. { "configure", N_("Preferences"), configure },
-#: ../src/gtk-run.c:377 ../src/main.c:52 ../plugins/menu.c:741
-msgid "Run"
-msgstr "Jalankan"
-
-#: ../src/gtk-run.c:391
-msgid "Enter the command you want to execute:"
-msgstr "Masukkan perintah yang ingin Anda eksekusi:"
-
-#: ../src/main.c:53 ../plugins/menu.c:742
-msgid "Restart"
-msgstr "Start Ulang"
-
-#: ../src/main.c:54 ../plugins/menu.c:743
-msgid "Logout"
-msgstr "Log keluar"
-
-#: ../src/main.c:252
+#: ../src/panel.c:1609
 #, c-format
 msgid "lxpanel %s - lightweight GTK2+ panel for UNIX desktops\n"
 msgstr "lxpanel %s - panel GTK2+ ringan untuk desktop UNIX\n"
 
-#: ../src/main.c:253
+#: ../src/panel.c:1610
 #, c-format
 msgid "Command line options:\n"
 msgstr "Opsi baris perintah:\n"
 
-#: ../src/main.c:254
+#: ../src/panel.c:1611
 #, c-format
 msgid " --help      -- print this help and exit\n"
 msgstr " --help      -- cetak bantuan ini dan keluar\n"
 
-#: ../src/main.c:255
+#: ../src/panel.c:1612
 #, c-format
 msgid " --version   -- print version and exit\n"
 msgstr " --version   -- cetak versi dan keluar\n"
 
 #. g_print(_(" --log <number> -- set log level 0-5. 0 - none 5 - chatty\n"));
 #. g_print(_(" --configure -- launch configuration utility\n"));
-#: ../src/main.c:258
+#: ../src/panel.c:1615
 #, c-format
 msgid " --profile name -- use specified profile\n"
 msgstr " --profile nama -- gunakan profil yang ditentukan\n"
 
-#: ../src/main.c:260
+#: ../src/panel.c:1617
 #, c-format
 msgid " -h  -- same as --help\n"
 msgstr " -h  -- sama seperti --help\n"
 
-#: ../src/main.c:261
+#: ../src/panel.c:1618
 #, c-format
 msgid " -p  -- same as --profile\n"
 msgstr " -p  -- sama seperti --profile\n"
 
-#: ../src/main.c:262
+#: ../src/panel.c:1619
 #, c-format
 msgid " -v  -- same as --version\n"
 msgstr " -v  -- sama seperti --version\n"
 
 #. g_print(_(" -C  -- same as --configure\n"));
-#: ../src/main.c:264
+#: ../src/panel.c:1621
 #, c-format
 msgid ""
 "\n"
@@ -225,49 +209,16 @@ msgstr ""
 "Kunjungi http://lxde.org/ untuk detail.\n"
 "\n"
 
-#: ../src/input-button.c:129
-#, c-format
-msgid "Key combination '%s' cannot be used as a global hotkey, sorry."
-msgstr "Kombinasi tombol '%s' tak dapat dipakai sebagai pintasan global, maaf."
+#: ../src/plugin.c:388
+msgid "No file manager is configured."
+msgstr "Tak ada manajer berkas yang ditata."
 
-#: ../src/input-button.c:132 ../src/input-button.c:331
-#: ../plugins/netstatus/netstatus-iface.c:191
-#: ../plugins/netstatus/netstatus-util.c:167
-msgid "Error"
-msgstr "Galat"
+#: ../src/gtk-run.c:387
+msgid "Enter the command you want to execute:"
+msgstr "Masukkan perintah yang ingin Anda eksekusi:"
 
-#: ../src/input-button.c:161
-msgid "LeftBtn"
-msgstr "TmblKiri"
-
-#: ../src/input-button.c:164
-msgid "MiddleBtn"
-msgstr "TmblTengah"
-
-#: ../src/input-button.c:167
-msgid "RightBtn"
-msgstr "TmblKanan"
-
-#: ../src/input-button.c:170
-#, c-format
-msgid "Btn%s"
-msgstr "Tmbl%s"
-
-#. GtkRadioButton "None"
-#: ../src/input-button.c:250 ../data/ui/panel-pref.glade.h:5
-msgid "None"
-msgstr "Nihil"
-
-#: ../src/input-button.c:257
-msgid "Custom:"
-msgstr "Tersuai:"
-
-#: ../src/input-button.c:329
-#, c-format
-msgid "Cannot assign '%s' as a global hotkey: it is already bound."
-msgstr "Tak bisa menugaskan '%s' sebagai pintasan global: itu telah diikat."
-
-#: ../data/ui/launchtaskbar.glade.h:1 ../plugins/launchtaskbar.c:3553
+#. vim: set sw=4 et sts=4 ts=4 :
+#: ../data/ui/launchtaskbar.glade.h:1 ../plugins/launchtaskbar.c:3475
 msgid "Application Launch and Task Bar"
 msgstr "Bilah Tugas dan Luncuran Aplikasi"
 
@@ -317,30 +268,26 @@ msgid "Combine multiple application windows into a single button"
 msgstr "Menggabungkan beberapa jendela aplikasi dalam satu tombol"
 
 #: ../data/ui/launchtaskbar.glade.h:14
-msgid "Disable enlargement for small task icons"
-msgstr "Nonaktifkan pembesaran bagi ikon tugas kecil"
-
-#: ../data/ui/launchtaskbar.glade.h:15
 msgid "Maximum width of task button"
 msgstr "Lebar maksimum tombol tugas"
 
-#: ../data/ui/launchtaskbar.glade.h:16
+#: ../data/ui/launchtaskbar.glade.h:15
 msgid "Spacing"
 msgstr "Jarak"
 
-#: ../data/ui/launchtaskbar.glade.h:17
+#: ../data/ui/launchtaskbar.glade.h:16
 msgid "<b>Taskbar</b>"
 msgstr "<b>Bilah tugas</b>"
 
-#: ../data/ui/launchtaskbar.glade.h:18
+#: ../data/ui/launchtaskbar.glade.h:17
 msgid "Only Application Launch Bar"
 msgstr "Hanya Bilah Luncuran Aplikasi"
 
-#: ../data/ui/launchtaskbar.glade.h:19
+#: ../data/ui/launchtaskbar.glade.h:18
 msgid "Only Task Bar (Window List)"
 msgstr "Hanya Bilah Tugas (Senarai Jendela)"
 
-#: ../data/ui/launchtaskbar.glade.h:20
+#: ../data/ui/launchtaskbar.glade.h:19
 msgid "Integrated Application Launch Bar and Task Bar"
 msgstr "Bilah Tugas dan Bilah Luncuran Aplikasi Terintegrasi"
 
@@ -393,8 +340,8 @@ msgstr "Alamat:"
 msgid "Destination:"
 msgstr "Tujuan:"
 
-#: ../data/ui/netstatus.glade.h:14 ../plugins/netstat/netstat.c:364
-#: ../plugins/netstat/netstat.c:375
+#: ../data/ui/netstatus.glade.h:14 ../plugins/netstat/netstat.c:360
+#: ../plugins/netstat/netstat.c:371
 msgid "Broadcast:"
 msgstr "Broadcast:"
 
@@ -438,6 +385,10 @@ msgstr "Piksel"
 #, no-c-format
 msgid "% Percent"
 msgstr "% Persen"
+
+#: ../data/ui/panel-pref.glade.h:5
+msgid "None"
+msgstr "Nihil"
 
 #: ../data/ui/panel-pref.glade.h:6
 msgid "Err"
@@ -520,7 +471,7 @@ msgid "Custom color"
 msgstr "Warna gubahan"
 
 #: ../data/ui/panel-pref.glade.h:32 ../plugins/space.c:88
-#: ../plugins/batt/batt.c:675
+#: ../plugins/batt/batt.c:651
 msgid "Size"
 msgstr "Ukuran"
 
@@ -596,7 +547,7 @@ msgstr "Tingkat Lanjut"
 msgid "CPU Usage Monitor"
 msgstr "Monitor Penggunaan CPU"
 
-#: ../plugins/cpu/cpu.c:282 ../plugins/monitors/monitors.c:699
+#: ../plugins/cpu/cpu.c:282 ../plugins/monitors/monitors.c:700
 msgid "Display CPU usage"
 msgstr "Tampilkan penggunaan CPU"
 
@@ -604,7 +555,7 @@ msgstr "Tampilkan penggunaan CPU"
 msgid "Desktop Number / Workspace Name"
 msgstr "Nomor Desktop / Nama Ruang"
 
-#: ../plugins/deskno/deskno.c:176 ../plugins/dclock.c:424
+#: ../plugins/deskno/deskno.c:176 ../plugins/dclock.c:426
 msgid "Bold font"
 msgstr "Fonta tebal"
 
@@ -616,81 +567,80 @@ msgstr "Tampilkan nama desktop"
 msgid "Display workspace number, by cmeury@users.sf.net"
 msgstr "Tampilkan nomor ruang kerja, oleh cmeury@users.sf.net"
 
-#: ../plugins/launchtaskbar.c:1443 ../plugins/launchtaskbar.c:3525
+#: ../plugins/launchtaskbar.c:1418 ../plugins/launchtaskbar.c:3445
 msgid "Application Launch Bar"
 msgstr "Bilah Luncuran Aplikasi"
 
-#: ../plugins/launchtaskbar.c:1446 ../plugins/launchtaskbar.c:3534
+#: ../plugins/launchtaskbar.c:1421 ../plugins/launchtaskbar.c:3456
 msgid "Task Bar (Window List)"
 msgstr "Batang Tugas (Senarai Jendela)"
 
-#: ../plugins/launchtaskbar.c:2507
+#: ../plugins/launchtaskbar.c:2445
 msgid "_Close all windows"
 msgstr "Tutup semua _jendela"
 
 #. Add Raise menu item.
-#: ../plugins/launchtaskbar.c:3380
+#: ../plugins/launchtaskbar.c:3304
 msgid "_Raise"
 msgstr "Naik_kan"
 
 #. Add Restore menu item.
-#: ../plugins/launchtaskbar.c:3385
+#: ../plugins/launchtaskbar.c:3309
 msgid "R_estore"
 msgstr "K_embalikan"
 
 #. Add Maximize menu item.
-#: ../plugins/launchtaskbar.c:3390
+#: ../plugins/launchtaskbar.c:3314
 msgid "Ma_ximize"
 msgstr "Ma_ksimalkan"
 
 #. Add Iconify menu item.
-#: ../plugins/launchtaskbar.c:3395
+#: ../plugins/launchtaskbar.c:3319
 msgid "Ico_nify"
 msgstr "Iko_nkan"
 
-#: ../plugins/launchtaskbar.c:3416
+#: ../plugins/launchtaskbar.c:3338
 #, c-format
 msgid "Workspace _%d"
 msgstr "Ruang kerja _%d"
 
-#: ../plugins/launchtaskbar.c:3421
+#: ../plugins/launchtaskbar.c:3343
 #, c-format
 msgid "Workspace %d"
 msgstr "Ruang kerja %d"
 
 #. Add "move to all workspaces" item.  This causes the window to be visible no matter what desktop is active.
-#: ../plugins/launchtaskbar.c:3437
+#: ../plugins/launchtaskbar.c:3359
 msgid "_All workspaces"
 msgstr "Semu_a ruang kerja"
 
-#. FIXME: add "Current workspace" item, active if not on a current
 #. Add Move to Workspace menu item as a submenu.
-#: ../plugins/launchtaskbar.c:3445
+#: ../plugins/launchtaskbar.c:3365
 msgid "_Move to Workspace"
 msgstr "Pin_dah ke Ruang Kerja"
 
 #. Add Close menu item.  By popular demand, we place this menu item closest to the cursor.
-#: ../plugins/launchtaskbar.c:3451
+#: ../plugins/launchtaskbar.c:3371
 msgid "_Close Window"
 msgstr "Tutup _Jendela"
 
-#: ../plugins/launchtaskbar.c:3453
+#: ../plugins/launchtaskbar.c:3373
 msgid "A_dd to Launcher"
 msgstr "Tam_bah ke Peluncur"
 
-#: ../plugins/launchtaskbar.c:3454
+#: ../plugins/launchtaskbar.c:3374
 msgid "Rem_ove from Launcher"
 msgstr "Hap_us dari Peluncur"
 
-#: ../plugins/launchtaskbar.c:3455
+#: ../plugins/launchtaskbar.c:3375
 msgid "_New Instance"
 msgstr "Insta_nsi Baru"
 
-#: ../plugins/launchtaskbar.c:3526
+#: ../plugins/launchtaskbar.c:3446
 msgid "Bar with buttons to launch application"
 msgstr "Batang dengan tombol untuk menjalankan aplikasi"
 
-#: ../plugins/launchtaskbar.c:3535
+#: ../plugins/launchtaskbar.c:3457
 msgid ""
 "Taskbar shows all opened windows and allow to iconify them, shade or get "
 "focus"
@@ -698,62 +648,62 @@ msgstr ""
 "Batang tugas menampilkan semua jendela terbuka dan izinkan untuk "
 "mengikonifikasi mereka, bayang atau mendapatkan fokus"
 
-#: ../plugins/launchtaskbar.c:3554
+#: ../plugins/launchtaskbar.c:3476
 msgid "Bar with buttons to launch application and/or show all opened windows"
 msgstr ""
 "Batang dengan tombol-tombol untuk meluncurkan aplikasi dan/atau menampilkan "
 "semua jendela yang terbuka"
 
-#: ../plugins/dclock.c:418 ../plugins/dclock.c:438
+#: ../plugins/dclock.c:420 ../plugins/dclock.c:440
 msgid "Digital Clock"
 msgstr "Jam Digital"
 
-#: ../plugins/dclock.c:420
+#: ../plugins/dclock.c:422
 msgid "Clock Format"
 msgstr "Format Jam"
 
-#: ../plugins/dclock.c:421
+#: ../plugins/dclock.c:423
 msgid "Tooltip Format"
 msgstr "Format Tip Alat"
 
-#: ../plugins/dclock.c:422
+#: ../plugins/dclock.c:424
 #, c-format
 msgid "Format codes: man 3 strftime; %n for line break"
 msgstr "Kode format: man 3 strftime; %n untuk memutus baris"
 
-#: ../plugins/dclock.c:423
+#: ../plugins/dclock.c:425
 msgid "Action when clicked (default: display calendar)"
 msgstr "Tindakan saat diklik (standar: menampilkan kalender)"
 
-#: ../plugins/dclock.c:425
+#: ../plugins/dclock.c:427
 msgid "Tooltip only"
 msgstr "Hanya tooltip"
 
-#: ../plugins/dclock.c:426
+#: ../plugins/dclock.c:428
 msgid "Center text"
 msgstr "Ketengahkan teks"
 
-#: ../plugins/dclock.c:439
+#: ../plugins/dclock.c:441
 msgid "Display digital clock and tooltip"
 msgstr "Tampilkan Jam Digital dan Tip Alat"
 
-#: ../plugins/menu.c:382
+#: ../plugins/menu.c:390
 msgid "Add to desktop"
 msgstr "Tambah ke desktop"
 
-#: ../plugins/menu.c:389
+#: ../plugins/menu.c:397
 msgid "Properties"
 msgstr "Properti"
 
-#: ../plugins/menu.c:1013 ../plugins/menu.c:1027
+#: ../plugins/menu.c:1020 ../plugins/menu.c:1033
 msgid "Menu"
 msgstr "Menu"
 
-#: ../plugins/menu.c:1014 ../plugins/dirmenu.c:357
+#: ../plugins/menu.c:1021 ../plugins/dirmenu.c:358
 msgid "Icon"
 msgstr "Ikon"
 
-#: ../plugins/menu.c:1028
+#: ../plugins/menu.c:1034
 msgid "Application Menu"
 msgstr "Menu Aplikasi"
 
@@ -769,11 +719,11 @@ msgstr "Tambah pemisah ke panel"
 msgid "Sorry, there was no window manager configuration program found."
 msgstr "Maaf, tidak ditemukan program konfigurasi manajer jendela."
 
-#: ../plugins/pager.c:144 ../plugins/pager.c:160
+#: ../plugins/pager.c:143 ../plugins/pager.c:159
 msgid "Desktop Pager"
 msgstr "Pemisah Desktop"
 
-#: ../plugins/pager.c:145 ../plugins/pager.c:161
+#: ../plugins/pager.c:144 ../plugins/pager.c:160
 msgid "Simple pager plugin"
 msgstr "Plugin pemisah sederhana"
 
@@ -785,11 +735,11 @@ msgstr "Ruang"
 msgid "Allocate space"
 msgstr "Alokasi ruang"
 
-#: ../plugins/tray.c:682
+#: ../plugins/tray.c:679
 msgid "System Tray"
 msgstr "Baki Sistem"
 
-#: ../plugins/tray.c:683
+#: ../plugins/tray.c:680
 msgid "System tray"
 msgstr "Baki sistem"
 
@@ -893,15 +843,15 @@ msgstr "Kelola tata letak papan ketik"
 msgid "Left click to iconify all windows.  Middle click to shade them."
 msgstr "Klik kiri untuk mengikonkan semua jendela. Klik tengah untuk berbayang."
 
-#: ../plugins/wincmd.c:224 ../plugins/wincmd.c:234
+#: ../plugins/wincmd.c:223 ../plugins/wincmd.c:241
 msgid "Minimize All Windows"
 msgstr "Minimalkan Semua Jendela"
 
-#: ../plugins/wincmd.c:226
+#: ../plugins/wincmd.c:225
 msgid "Alternately iconify/shade and raise"
 msgstr "Bergantian jadikan ikon/berbayang dan diangkat"
 
-#: ../plugins/wincmd.c:235
+#: ../plugins/wincmd.c:242
 msgid ""
 "Sends commands to all desktop windows.\n"
 "Supported commands are 1) iconify and 2) shade"
@@ -913,63 +863,63 @@ msgstr ""
 msgid "Open in _Terminal"
 msgstr "Buka di _Terminal"
 
-#: ../plugins/dirmenu.c:353 ../plugins/dirmenu.c:369
+#: ../plugins/dirmenu.c:354 ../plugins/dirmenu.c:370
 msgid "Directory Menu"
 msgstr "Menu Direktori"
 
-#: ../plugins/dirmenu.c:355
+#: ../plugins/dirmenu.c:356
 msgid "Directory"
 msgstr "Direktori"
 
-#: ../plugins/dirmenu.c:356
+#: ../plugins/dirmenu.c:357
 msgid "Label"
 msgstr "Label"
 
-#: ../plugins/dirmenu.c:370
+#: ../plugins/dirmenu.c:371
 msgid "Browse directory tree via menu (Author = PCMan)"
 msgstr "Ramban pohon direktori via menu (Penulis = PCMan)"
 
-#: ../plugins/thermal/thermal.c:558 ../plugins/thermal/thermal.c:576
+#: ../plugins/thermal/thermal.c:521 ../plugins/thermal/thermal.c:539
 msgid "Temperature Monitor"
 msgstr "Monitor Temperatur"
 
-#: ../plugins/thermal/thermal.c:560
+#: ../plugins/thermal/thermal.c:523
 msgid "Normal color"
 msgstr "Warna normal"
 
-#: ../plugins/thermal/thermal.c:561
+#: ../plugins/thermal/thermal.c:524
 msgid "Warning1 color"
 msgstr "Warna peringatan1"
 
-#: ../plugins/thermal/thermal.c:562
+#: ../plugins/thermal/thermal.c:525
 msgid "Warning2 color"
 msgstr "Warna peringatan2"
 
-#: ../plugins/thermal/thermal.c:563
+#: ../plugins/thermal/thermal.c:526
 msgid "Automatic sensor location"
 msgstr "Lokasi sensor otomatis"
 
-#: ../plugins/thermal/thermal.c:564
+#: ../plugins/thermal/thermal.c:527
 msgid "Sensor"
 msgstr "Sensor"
 
-#: ../plugins/thermal/thermal.c:565
+#: ../plugins/thermal/thermal.c:528
 msgid "Automatic temperature levels"
 msgstr "Level temperatur otomatis"
 
-#: ../plugins/thermal/thermal.c:566
+#: ../plugins/thermal/thermal.c:529
 msgid "Warning1 temperature"
 msgstr "Suhu peringatan1"
 
-#: ../plugins/thermal/thermal.c:567
+#: ../plugins/thermal/thermal.c:530
 msgid "Warning2 temperature"
 msgstr "Suhu peringatan2"
 
-#: ../plugins/thermal/thermal.c:577
+#: ../plugins/thermal/thermal.c:540
 msgid "Display system temperature"
 msgstr "Tampilkan temperatur sistem"
 
-#: ../plugins/cpufreq/cpufreq.c:326
+#: ../plugins/cpufreq/cpufreq.c:325
 #, c-format
 msgid ""
 "Frequency: %d MHz\n"
@@ -978,37 +928,37 @@ msgstr ""
 "Frekuensi: %d MHz\n"
 "Governor: %s"
 
-#: ../plugins/cpufreq/cpufreq.c:409
+#: ../plugins/cpufreq/cpufreq.c:408
 msgid "CPUFreq frontend"
 msgstr "Frontend CPUFreq"
 
-#: ../plugins/cpufreq/cpufreq.c:410
+#: ../plugins/cpufreq/cpufreq.c:409
 msgid "Display CPU frequency and allow to change governors and frequency"
 msgstr ""
 "Menampilkan frekuensi CPU dan mengijinkan mengubah governor dan frekuensi"
 
 #. FIXME: display current level in tooltip. ex: "Volume Control: 80%"
 #. Display current level in tooltip.
-#: ../plugins/volume/volume.c:278 ../plugins/volumealsa/volumealsa.c:350
-#: ../plugins/volumealsa/volumealsa.c:524
+#: ../plugins/volume/volume.c:278 ../plugins/volumealsa/volumealsa.c:353
+#: ../plugins/volumealsa/volumealsa.c:537
 msgid "Volume control"
 msgstr "Kendali volume"
 
-#: ../plugins/volume/volume.c:286 ../plugins/volumealsa/volumealsa.c:637
+#: ../plugins/volume/volume.c:286 ../plugins/volumealsa/volumealsa.c:641
 msgid "Volume Control"
 msgstr "Kendali Volume"
 
 #. Create a frame as the child of the viewport.
-#: ../plugins/volume/volume-impl.c:109 ../plugins/volumealsa/volumealsa.c:477
+#: ../plugins/volume/volume-impl.c:109 ../plugins/volumealsa/volumealsa.c:491
 msgid "Volume"
 msgstr "Volume"
 
 #. Create a check button as the child of the vertical box.
-#: ../plugins/volumealsa/volumealsa.c:496
+#: ../plugins/volumealsa/volumealsa.c:510
 msgid "Mute"
 msgstr "Diam"
 
-#: ../plugins/volumealsa/volumealsa.c:619
+#: ../plugins/volumealsa/volumealsa.c:623
 msgid ""
 "Error, you need to install an application to configure the sound "
 "(pavucontrol, alsamixer ...)"
@@ -1016,96 +966,96 @@ msgstr ""
 "Galat, Anda perlu memasang suatu aplikasi untuk menata suara (pavucontrol, "
 "alsamixer, ...)"
 
-#: ../plugins/volumealsa/volumealsa.c:638
+#: ../plugins/volumealsa/volumealsa.c:642
 msgid "Display and control volume for ALSA"
 msgstr "Tampilan dan kendali volume bagi ALSA"
 
-#: ../plugins/netstat/netstat.c:179
+#: ../plugins/netstat/netstat.c:178
 msgid "<Hidden Access Point>"
 msgstr "<Titik Akses Tersembunyi>"
 
-#: ../plugins/netstat/netstat.c:212
+#: ../plugins/netstat/netstat.c:211
 msgid "Wireless Networks not found in range"
 msgstr "Jaringan Nirkabel tak ditemukan di jangkauan"
 
 #. Repair
-#: ../plugins/netstat/netstat.c:248
+#: ../plugins/netstat/netstat.c:245
 msgid "Repair"
 msgstr "Perbaiki"
 
 #. interface down
-#: ../plugins/netstat/netstat.c:253
+#: ../plugins/netstat/netstat.c:250
 msgid "Disable"
 msgstr "Nonaktifkan"
 
-#: ../plugins/netstat/netstat.c:344
+#: ../plugins/netstat/netstat.c:340
 msgid "Wireless Connection has no connectivity"
 msgstr "Koneksi Nirkabel tak memiliki konektivitas"
 
-#: ../plugins/netstat/netstat.c:346
+#: ../plugins/netstat/netstat.c:342
 msgid "Network cable is plugged out"
 msgstr "Kabel jaringan dicabut"
 
-#: ../plugins/netstat/netstat.c:348
+#: ../plugins/netstat/netstat.c:344
 msgid "Connection has limited or no connectivity"
 msgstr "Koneksi terbatas atau tak ada konektivitas"
 
-#: ../plugins/netstat/netstat.c:352 ../plugins/netstat/netstat.c:363
-#: ../plugins/netstat/netstat.c:374
+#: ../plugins/netstat/netstat.c:348 ../plugins/netstat/netstat.c:359
+#: ../plugins/netstat/netstat.c:370
 msgid "IP Address:"
 msgstr "Alamat IP:"
 
-#: ../plugins/netstat/netstat.c:353
+#: ../plugins/netstat/netstat.c:349
 msgid "Remote IP:"
 msgstr "IP Jauh:"
 
-#: ../plugins/netstat/netstat.c:354 ../plugins/netstat/netstat.c:365
-#: ../plugins/netstat/netstat.c:376
+#: ../plugins/netstat/netstat.c:350 ../plugins/netstat/netstat.c:361
+#: ../plugins/netstat/netstat.c:372
 msgid "Netmask:"
 msgstr "Netmask:"
 
-#: ../plugins/netstat/netstat.c:355 ../plugins/netstat/netstat.c:367
-#: ../plugins/netstat/netstat.c:378
+#: ../plugins/netstat/netstat.c:351 ../plugins/netstat/netstat.c:363
+#: ../plugins/netstat/netstat.c:374
 msgid "Activity"
 msgstr "Aktivitas"
 
-#: ../plugins/netstat/netstat.c:355 ../plugins/netstat/netstat.c:367
-#: ../plugins/netstat/netstat.c:378
+#: ../plugins/netstat/netstat.c:351 ../plugins/netstat/netstat.c:363
+#: ../plugins/netstat/netstat.c:374
 msgid "Sent"
 msgstr "Dikirim"
 
-#: ../plugins/netstat/netstat.c:355 ../plugins/netstat/netstat.c:367
-#: ../plugins/netstat/netstat.c:378
+#: ../plugins/netstat/netstat.c:351 ../plugins/netstat/netstat.c:363
+#: ../plugins/netstat/netstat.c:374
 msgid "Received"
 msgstr "Diterima"
 
-#: ../plugins/netstat/netstat.c:356 ../plugins/netstat/netstat.c:368
-#: ../plugins/netstat/netstat.c:379
+#: ../plugins/netstat/netstat.c:352 ../plugins/netstat/netstat.c:364
+#: ../plugins/netstat/netstat.c:375
 msgid "bytes"
 msgstr "bita"
 
-#: ../plugins/netstat/netstat.c:357 ../plugins/netstat/netstat.c:369
-#: ../plugins/netstat/netstat.c:380
+#: ../plugins/netstat/netstat.c:353 ../plugins/netstat/netstat.c:365
+#: ../plugins/netstat/netstat.c:376
 msgid "packets"
 msgstr "paket"
 
-#: ../plugins/netstat/netstat.c:360 ../plugins/netstatus/netstatus-iface.c:173
+#: ../plugins/netstat/netstat.c:356 ../plugins/netstatus/netstatus-iface.c:173
 msgid "Wireless"
 msgstr "Nirkabel"
 
-#: ../plugins/netstat/netstat.c:362
+#: ../plugins/netstat/netstat.c:358
 msgid "Protocol:"
 msgstr "Protokol:"
 
-#: ../plugins/netstat/netstat.c:366 ../plugins/netstat/netstat.c:377
+#: ../plugins/netstat/netstat.c:362 ../plugins/netstat/netstat.c:373
 msgid "HW Address:"
 msgstr "Alamat Peranti Keras:"
 
-#: ../plugins/netstat/netstat.c:497
+#: ../plugins/netstat/netstat.c:484
 msgid "Manage Networks"
 msgstr "Kelola Jaringan"
 
-#: ../plugins/netstat/netstat.c:498
+#: ../plugins/netstat/netstat.c:485
 msgid "Monitor and Manage networks"
 msgstr "Monitor dan Kelola jaringan"
 
@@ -1143,7 +1093,7 @@ msgid "Monitor network status"
 msgstr "Monitor status jaringan"
 
 #: ../plugins/netstatus/netstatus-dialog.c:52
-#: ../plugins/netstatus/netstatus-dialog.c:316
+#: ../plugins/netstatus/netstatus-dialog.c:313
 msgid "Unknown"
 msgstr "Tak diketahui"
 
@@ -1162,7 +1112,7 @@ msgid "%lu packet"
 msgid_plural "%lu packets"
 msgstr[0] "%lu paket"
 
-#: ../plugins/netstatus/netstatus-dialog.c:400
+#: ../plugins/netstatus/netstatus-dialog.c:397
 #, c-format
 msgid ""
 "There was an error displaying help:\n"
@@ -1171,48 +1121,48 @@ msgstr ""
 "Terdapat galat ketika menampilkan bantuan:\n"
 "%s"
 
-#: ../plugins/netstatus/netstatus-icon.c:381
+#: ../plugins/netstatus/netstatus-icon.c:379
 #, c-format
 msgid "Network Connection: %s"
 msgstr "Koneksi Jaringan: %s"
 
-#: ../plugins/netstatus/netstatus-icon.c:386
+#: ../plugins/netstatus/netstatus-icon.c:384
 msgid "Network Connection"
 msgstr "Koneksi Jaringan"
 
-#: ../plugins/netstatus/netstatus-icon.c:822
+#: ../plugins/netstatus/netstatus-icon.c:824
 msgid "Interface"
 msgstr "Antarmuka"
 
-#: ../plugins/netstatus/netstatus-icon.c:823
+#: ../plugins/netstatus/netstatus-icon.c:825
 msgid "The current interface the icon is monitoring."
 msgstr "Antarmuka saat ini yang dimonitor oleh ikon."
 
-#: ../plugins/netstatus/netstatus-icon.c:830
+#: ../plugins/netstatus/netstatus-icon.c:832
 msgid "Orientation"
 msgstr "Orientasi"
 
-#: ../plugins/netstatus/netstatus-icon.c:831
+#: ../plugins/netstatus/netstatus-icon.c:833
 msgid "The orientation of the tray."
 msgstr "Orientasi dari baki."
 
-#: ../plugins/netstatus/netstatus-icon.c:839
+#: ../plugins/netstatus/netstatus-icon.c:841
 msgid "Tooltips Enabled"
 msgstr "Aktifkan Tip Alat"
 
-#: ../plugins/netstatus/netstatus-icon.c:840
+#: ../plugins/netstatus/netstatus-icon.c:842
 msgid "Whether or not the icon's tooltips are enabled."
 msgstr "Apakah ikon tip alat diaktifkan atau tidak."
 
-#: ../plugins/netstatus/netstatus-icon.c:847
+#: ../plugins/netstatus/netstatus-icon.c:849
 msgid "Show Signal"
 msgstr "Tampilkan Sinyal"
 
-#: ../plugins/netstatus/netstatus-icon.c:848
+#: ../plugins/netstatus/netstatus-icon.c:850
 msgid "Whether or not the signal strength should be displayed."
 msgstr "Apakah kekuatan sinyal perlu ditampilkan atau tidak."
 
-#: ../plugins/netstatus/netstatus-icon.c:957
+#: ../plugins/netstatus/netstatus-icon.c:959
 #, c-format
 msgid ""
 "Please contact your system administrator to resolve the following problem:\n"
@@ -1232,7 +1182,7 @@ msgid "The interface name"
 msgstr "Nama antarmuka"
 
 #: ../plugins/netstatus/netstatus-iface.c:156
-#: ../plugins/weather/weatherwidget.c:2080
+#: ../plugins/weather/weatherwidget.c:2085
 msgid "State"
 msgstr "Status"
 
@@ -1259,6 +1209,11 @@ msgstr "Sinyal"
 #: ../plugins/netstatus/netstatus-iface.c:182
 msgid "Wireless signal strength percentage"
 msgstr "Persentase kekuatan sinyal nirkabel"
+
+#: ../plugins/netstatus/netstatus-iface.c:191
+#: ../plugins/netstatus/netstatus-util.c:167
+msgid "Error"
+msgstr "Galat"
 
 #: ../plugins/netstatus/netstatus-iface.c:192
 msgid "The current error condition"
@@ -1472,22 +1427,22 @@ msgstr "Menerima"
 msgid "Sending/Receiving"
 msgstr "Mengirim/Menerima"
 
-#: ../plugins/batt/batt.c:152
+#: ../plugins/batt/batt.c:151
 #, c-format
 msgid "Battery: %d%% charged, %d:%02d until full"
 msgstr "Baterai: %d%% terisi, %d:%02d sampai penuh"
 
-#: ../plugins/batt/batt.c:163
+#: ../plugins/batt/batt.c:162
 #, c-format
 msgid "Battery: %d%% charged, %d:%02d left"
 msgstr "Baterai: %d%% terisi, %d:%02d tersisa"
 
-#: ../plugins/batt/batt.c:169
+#: ../plugins/batt/batt.c:168
 #, c-format
 msgid "Battery: %d%% charged"
 msgstr "Baterai: %d%% terisi"
 
-#: ../plugins/batt/batt.c:179
+#: ../plugins/batt/batt.c:178
 #, c-format
 msgid ""
 "\n"
@@ -1496,7 +1451,7 @@ msgstr ""
 "\n"
 "%sRancangan energi penuh:\t\t%5d mWh"
 
-#: ../plugins/batt/batt.c:181
+#: ../plugins/batt/batt.c:180
 #, c-format
 msgid ""
 "\n"
@@ -1505,7 +1460,7 @@ msgstr ""
 "\n"
 "%sEnergi penuh:\t\t\t%5d mWh"
 
-#: ../plugins/batt/batt.c:183
+#: ../plugins/batt/batt.c:182
 #, c-format
 msgid ""
 "\n"
@@ -1514,7 +1469,7 @@ msgstr ""
 "\n"
 "%sEnergi kini:\t\t\t%5d mWh"
 
-#: ../plugins/batt/batt.c:185
+#: ../plugins/batt/batt.c:184
 #, c-format
 msgid ""
 "\n"
@@ -1523,7 +1478,7 @@ msgstr ""
 "\n"
 "%sDaya kini:\t\t\t%5d mW"
 
-#: ../plugins/batt/batt.c:188
+#: ../plugins/batt/batt.c:187
 #, c-format
 msgid ""
 "\n"
@@ -1532,7 +1487,7 @@ msgstr ""
 "\n"
 "%sRancangan muatan penuh:\t%5d mAh"
 
-#: ../plugins/batt/batt.c:190
+#: ../plugins/batt/batt.c:189
 #, c-format
 msgid ""
 "\n"
@@ -1541,7 +1496,7 @@ msgstr ""
 "\n"
 "%sMuatan penuh:\t\t\t%5d mAh"
 
-#: ../plugins/batt/batt.c:192
+#: ../plugins/batt/batt.c:191
 #, c-format
 msgid ""
 "\n"
@@ -1550,7 +1505,7 @@ msgstr ""
 "\n"
 "%sMuatan kini:\t\t\t%5d mAh"
 
-#: ../plugins/batt/batt.c:194
+#: ../plugins/batt/batt.c:193
 #, c-format
 msgid ""
 "\n"
@@ -1559,7 +1514,7 @@ msgstr ""
 "\n"
 "%sArus kini:\t\t\t%5d mA"
 
-#: ../plugins/batt/batt.c:197
+#: ../plugins/batt/batt.c:196
 #, c-format
 msgid ""
 "\n"
@@ -1568,79 +1523,75 @@ msgstr ""
 "\n"
 "%sTegangan kini:\t\t%.3lf V"
 
-#: ../plugins/batt/batt.c:235
+#: ../plugins/batt/batt.c:234
 msgid "No batteries found"
 msgstr "Tak ada baterai yang ditemukan"
 
-#: ../plugins/batt/batt.c:515 ../plugins/batt/batt.c:644
-msgid "Battery low"
-msgstr "Baterai lemah"
-
-#: ../plugins/batt/batt.c:664 ../plugins/batt/batt.c:685
+#: ../plugins/batt/batt.c:640 ../plugins/batt/batt.c:661
 msgid "Battery Monitor"
 msgstr "Monitor Baterai"
 
-#: ../plugins/batt/batt.c:666
+#: ../plugins/batt/batt.c:642
 msgid "Hide if there is no battery"
 msgstr "Sembunyikan jika tidak ada baterai"
 
-#: ../plugins/batt/batt.c:667
+#: ../plugins/batt/batt.c:643
 msgid "Alarm command"
 msgstr "Perintah alarm"
 
-#: ../plugins/batt/batt.c:668
+#: ../plugins/batt/batt.c:644
 msgid "Alarm time (minutes left)"
 msgstr "Waktu alarm (menit tersisa)"
 
-#: ../plugins/batt/batt.c:669
+#: ../plugins/batt/batt.c:645
 msgid "Background color"
 msgstr "Warna latar belakang"
 
-#: ../plugins/batt/batt.c:670
+#: ../plugins/batt/batt.c:646
 msgid "Charging color 1"
 msgstr "Warna pengisian 1"
 
-#: ../plugins/batt/batt.c:671
+#: ../plugins/batt/batt.c:647
 msgid "Charging color 2"
 msgstr "Warna pengisian 2"
 
-#: ../plugins/batt/batt.c:672
+#: ../plugins/batt/batt.c:648
 msgid "Discharging color 1"
 msgstr "Warna tidak mengisi 1"
 
-#: ../plugins/batt/batt.c:673
+#: ../plugins/batt/batt.c:649
 msgid "Discharging color 2"
 msgstr "Warna tidak mengisi 2"
 
-#: ../plugins/batt/batt.c:674
+#: ../plugins/batt/batt.c:650
 msgid "Border width"
 msgstr "Lebar batas"
 
-#: ../plugins/batt/batt.c:676
+#: ../plugins/batt/batt.c:652
 msgid "Show Extended Information"
 msgstr "Tampilkan Informasi Yang Diperluas"
 
-#: ../plugins/batt/batt.c:686
+#: ../plugins/batt/batt.c:662
 msgid "Display battery status using ACPI"
 msgstr "Tampilkan status baterai menggunakan ACPI"
 
-#: ../plugins/kbled/kbled.c:197 ../plugins/kbled/kbled.c:228
+#: ../plugins/kbled/kbled.c:228 ../plugins/kbled/kbled.c:259
 msgid "Keyboard LED"
 msgstr "Papan Ketik LED"
 
-#: ../plugins/kbled/kbled.c:199
+#: ../plugins/kbled/kbled.c:230
 msgid "Show CapsLock"
 msgstr "Tampilkan CapsLock"
 
-#: ../plugins/kbled/kbled.c:200
+#: ../plugins/kbled/kbled.c:231
 msgid "Show NumLock"
 msgstr "Tampilkan NumLock"
 
-#: ../plugins/kbled/kbled.c:201
+#: ../plugins/kbled/kbled.c:232
 msgid "Show ScrollLock"
 msgstr "Tampilkan ScrollLock"
 
-#: ../plugins/kbled/kbled.c:229
+#: ../plugins/kbled/kbled.c:260
 msgid "Indicators for CapsLock, NumLock, and ScrollLock keys"
 msgstr "Indikator untuk tombol CapsLock, NumLock, dan ScrollLock"
 
@@ -1686,48 +1637,48 @@ msgstr "Tambahkan aplet indikator ke panel"
 msgid "CPU usage: %.2f%%"
 msgstr "Pemakaian CPU: %.2f%%"
 
-#: ../plugins/monitors/monitors.c:365
+#: ../plugins/monitors/monitors.c:366
 #, c-format
 msgid "RAM usage: %.1fMB (%.2f%%)"
 msgstr "Pemakaian RAM: %.1fMB (%.2f%%)"
 
-#: ../plugins/monitors/monitors.c:697 ../plugins/monitors/monitors.c:782
+#: ../plugins/monitors/monitors.c:698 ../plugins/monitors/monitors.c:783
 msgid "Resource monitors"
 msgstr "Pemantau sumber daya"
 
-#: ../plugins/monitors/monitors.c:700
+#: ../plugins/monitors/monitors.c:701
 msgid "CPU color"
 msgstr "Warna CPU"
 
-#: ../plugins/monitors/monitors.c:701
+#: ../plugins/monitors/monitors.c:702
 msgid "Display RAM usage"
 msgstr "Tampilkan penggunaan RAM"
 
-#: ../plugins/monitors/monitors.c:702
+#: ../plugins/monitors/monitors.c:703
 msgid "RAM color"
 msgstr "Warna RAM"
 
-#: ../plugins/monitors/monitors.c:703
+#: ../plugins/monitors/monitors.c:704
 msgid "Action when clicked (default: lxtask)"
 msgstr "Tindakan saat diklik (bawaan: lxtask)"
 
-#: ../plugins/monitors/monitors.c:783
+#: ../plugins/monitors/monitors.c:784
 msgid "Display monitors (CPU, RAM)"
 msgstr "Tampilkan pemantau (CPU, RAM)"
 
-#: ../plugins/weather/weatherwidget.c:52
+#: ../plugins/weather/weatherwidget.c:50
 msgid "[N/A]"
 msgstr "[T/T]"
 
-#: ../plugins/weather/weatherwidget.c:792
+#: ../plugins/weather/weatherwidget.c:796
 msgid "Enter New Location"
 msgstr "Masukkan Lokasi Baru"
 
-#: ../plugins/weather/weatherwidget.c:806
+#: ../plugins/weather/weatherwidget.c:810
 msgid "_New Location:"
 msgstr "Lokasi _Baru:"
 
-#: ../plugins/weather/weatherwidget.c:817
+#: ../plugins/weather/weatherwidget.c:821
 msgid ""
 "Enter the:\n"
 "- city, or\n"
@@ -1741,190 +1692,192 @@ msgstr ""
 "- kode pos\n"
 "yang ingin diambil prakiraan cuacanya."
 
-#: ../plugins/weather/weatherwidget.c:854
-#: ../plugins/weather/weatherwidget.c:987
+#: ../plugins/weather/weatherwidget.c:858
+#: ../plugins/weather/weatherwidget.c:991
 msgid "You must specify a location."
 msgstr "Anda mesti menyatakan suatu lokasi."
 
-#: ../plugins/weather/weatherwidget.c:901
+#: ../plugins/weather/weatherwidget.c:905
 #, c-format
 msgid "Location '%s' not found!"
 msgstr "Lokasi '%s' tak ditemukan!"
 
-#: ../plugins/weather/weatherwidget.c:1060
+#: ../plugins/weather/weatherwidget.c:1063
 msgid "Preferences"
 msgstr "Preferensi"
 
-#: ../plugins/weather/weatherwidget.c:1066
+#: ../plugins/weather/weatherwidget.c:1069
 msgid "Refresh"
 msgstr "Segarkan"
 
-#: ../plugins/weather/weatherwidget.c:1072
+#: ../plugins/weather/weatherwidget.c:1075
 msgid "Quit"
 msgstr "Keluar"
 
-#: ../plugins/weather/weatherwidget.c:1229
+#: ../plugins/weather/weatherwidget.c:1236
 msgid "Weather Preferences"
 msgstr "Preferensi Cuaca"
 
-#: ../plugins/weather/weatherwidget.c:1243
+#: ../plugins/weather/weatherwidget.c:1250
 msgid "Current Location"
 msgstr "Lokasi Kini"
 
-#: ../plugins/weather/weatherwidget.c:1247
-#: ../plugins/weather/weatherwidget.c:1524
+#: ../plugins/weather/weatherwidget.c:1254
+#: ../plugins/weather/weatherwidget.c:1529
 msgid "None configured"
 msgstr "Tak ada yang dikonfigurasi"
 
-#: ../plugins/weather/weatherwidget.c:1249
-#: ../plugins/weather/weatherwidget.c:1521
+#: ../plugins/weather/weatherwidget.c:1256
+#: ../plugins/weather/weatherwidget.c:1526
 msgid "_Set"
 msgstr "_Atur"
 
-#: ../plugins/weather/weatherwidget.c:1270
+#: ../plugins/weather/weatherwidget.c:1277
 msgid "Display"
 msgstr "Tampilan"
 
-#: ../plugins/weather/weatherwidget.c:1274
+#: ../plugins/weather/weatherwidget.c:1281
 msgid "Name:"
 msgstr "Nama:"
 
-#: ../plugins/weather/weatherwidget.c:1278
+#: ../plugins/weather/weatherwidget.c:1285
 msgid "Units:"
 msgstr "Satuan:"
 
-#: ../plugins/weather/weatherwidget.c:1282
+#: ../plugins/weather/weatherwidget.c:1289
 msgid "_Metric (°C)"
 msgstr "_Metrik (°C)"
 
-#: ../plugins/weather/weatherwidget.c:1284
+#: ../plugins/weather/weatherwidget.c:1291
 msgid "_English (°F)"
 msgstr "_Inggris (°F)"
 
-#: ../plugins/weather/weatherwidget.c:1319
+#: ../plugins/weather/weatherwidget.c:1326
 msgid "Forecast"
 msgstr "Prakiraan"
 
-#: ../plugins/weather/weatherwidget.c:1323
+#: ../plugins/weather/weatherwidget.c:1330
 msgid "Updates:"
 msgstr "Pemutakhiran:"
 
-#: ../plugins/weather/weatherwidget.c:1327
+#: ../plugins/weather/weatherwidget.c:1334
 msgid "Ma_nual"
 msgstr "Ma_nual"
 
-#: ../plugins/weather/weatherwidget.c:1331
+#: ../plugins/weather/weatherwidget.c:1338
 msgid "_Automatic, every"
 msgstr "Otom_atis, setiap"
 
-#: ../plugins/weather/weatherwidget.c:1352
+#: ../plugins/weather/weatherwidget.c:1359
 msgid "minutes"
 msgstr "menit"
 
-#: ../plugins/weather/weatherwidget.c:1361
+#: ../plugins/weather/weatherwidget.c:1368
 msgid "Source:"
 msgstr "Sumber:"
 
-#: ../plugins/weather/weatherwidget.c:1477
+#: ../plugins/weather/weatherwidget.c:1482
 msgid "C_hange"
 msgstr "Uba_h"
 
 #. Both are available
-#: ../plugins/weather/weatherwidget.c:1565
+#: ../plugins/weather/weatherwidget.c:1570
 #, c-format
 msgid "Current Conditions for %s"
 msgstr "Kondisi Kini bagi %s"
 
-#: ../plugins/weather/weatherwidget.c:1589
+#: ../plugins/weather/weatherwidget.c:1594
 msgid "Location:"
 msgstr "Lokasi:"
 
-#: ../plugins/weather/weatherwidget.c:1612
+#: ../plugins/weather/weatherwidget.c:1617
 msgid "Last updated:"
 msgstr "Terakhir dimutakhirkan:"
 
-#: ../plugins/weather/weatherwidget.c:1639
+#: ../plugins/weather/weatherwidget.c:1644
 msgid "Feels like:"
 msgstr "Terasa seperti:"
 
-#: ../plugins/weather/weatherwidget.c:1664
+#: ../plugins/weather/weatherwidget.c:1669
 msgid "Humidity:"
 msgstr "Kelembaban:"
 
-#: ../plugins/weather/weatherwidget.c:1691
+#: ../plugins/weather/weatherwidget.c:1696
 msgid "Pressure:"
 msgstr "Tekanan:"
 
-#: ../plugins/weather/weatherwidget.c:1718
+#: ../plugins/weather/weatherwidget.c:1723
 msgid "Visibility:"
 msgstr "Visibilitas:"
 
-#: ../plugins/weather/weatherwidget.c:1746
+#: ../plugins/weather/weatherwidget.c:1751
 msgid "Wind:"
 msgstr "Angin:"
 
-#: ../plugins/weather/weatherwidget.c:1769
+#: ../plugins/weather/weatherwidget.c:1774
 msgid "Sunrise:"
 msgstr "Matahari terbit:"
 
-#: ../plugins/weather/weatherwidget.c:1792
+#: ../plugins/weather/weatherwidget.c:1797
 msgid "Sunset:"
 msgstr "Matahari terbenam:"
 
-#: ../plugins/weather/weatherwidget.c:1898
-#: ../plugins/weather/weatherwidget.c:2234
+#: ../plugins/weather/weatherwidget.c:1903
+#: ../plugins/weather/weatherwidget.c:2239
 #, c-format
 msgid "Forecast for %s unavailable."
 msgstr "Prakiraan bagi %s tak tersedia."
 
-#: ../plugins/weather/weatherwidget.c:1907
-#: ../plugins/weather/weatherwidget.c:2239
+#: ../plugins/weather/weatherwidget.c:1912
+#: ../plugins/weather/weatherwidget.c:2244
 #, c-format
 msgid "Location not set."
 msgstr "Lokasi belum diatur."
 
-#: ../plugins/weather/weatherwidget.c:1924
+#: ../plugins/weather/weatherwidget.c:1929
 #, c-format
 msgid "Searching for '%s'..."
 msgstr "Mencari '%s'..."
 
-#: ../plugins/weather/weatherwidget.c:2050
+#: ../plugins/weather/weatherwidget.c:2055
 #, c-format
 msgid "Location matches for '%s'"
 msgstr "Lokasi yang cocok dengan '%s'"
 
-#: ../plugins/weather/weatherwidget.c:2070
+#: ../plugins/weather/weatherwidget.c:2075
 msgid "City"
 msgstr "Kota"
 
-#: ../plugins/weather/weatherwidget.c:2090
+#: ../plugins/weather/weatherwidget.c:2095
 msgid "Country"
 msgstr "Negara"
 
 #. make it nice and pretty
-#: ../plugins/weather/weatherwidget.c:2221
+#: ../plugins/weather/weatherwidget.c:2226
 msgid "Currently in "
 msgstr "Sedang di "
 
-#: ../plugins/weather/weatherwidget.c:2223
+#: ../plugins/weather/weatherwidget.c:2228
 msgid "Today: "
 msgstr "Hari ini: "
 
-#: ../plugins/weather/weatherwidget.c:2224
+#: ../plugins/weather/weatherwidget.c:2229
 msgid "Tomorrow: "
 msgstr "Besok: "
 
-#: ../plugins/weather/weather.c:312
+#: ../plugins/weather/weather.c:307
 msgid "Weather Plugin"
 msgstr "Pengaya Cuaca"
 
-#: ../plugins/weather/weather.c:313
+#: ../plugins/weather/weather.c:308
 msgid "Show weather conditions for a location."
 msgstr "Tampilkan kondisi cuaca untuk suatu lokasi."
 
+#, c-format
 #~ msgid " --log <number> -- set log level 0-5. 0 - none 5 - chatty\n"
 #~ msgstr " --log <nomor> -- atur level log 0-5. 0 - tak ada 5 - lengkap\n"
 
+#, c-format
 #~ msgid "Format codes: man 3 strftime; \\%n for line break"
 #~ msgstr "Kode format: man 3 strftime; \\%n untuk memutus baris"
 
@@ -1956,6 +1909,7 @@ msgstr "Tampilkan kondisi cuaca untuk suatu lokasi."
 #~ "Galat, Anda perlu memasang aplikasi untuk menata suara (pavucontrol, "
 #~ "alsamixer, ...)"
 
+#, c-format
 #~ msgid "Failed to launch time configuration tool: %s"
 #~ msgstr "Gagal menjalankan alat konfigurasi waktu: %s"
 

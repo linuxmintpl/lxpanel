@@ -2,7 +2,7 @@
 
 bin_PROGRAMS = lxpanel lxpanelctl
 
-lxpanel_CPPFLAGS = \
+lxpanel_CFLAGS = \
 	-I$(top_srcdir) \
 	-DPACKAGE_LIB_DIR=\""$(libdir)"\" \
 	-DPACKAGE_DATA_DIR=\""$(datadir)/lxpanel"\" \
@@ -18,28 +18,19 @@ if ENABLE_MENU_CACHE
 MENU_SOURCES = menu-policy.c
 endif
 
-pkglib_LTLIBRARIES = liblxpanel.la
-
-liblxpanel_la_CPPFLAGS = $(lxpanel_CPPFLAGS) $(KEYBINDER_CFLAGS)
-liblxpanel_la_SOURCES = \
+lxpanel_SOURCES = \
 	misc.c \
+	gtk-run.c \
+	bg.c \
 	configurator.c \
 	dbg.c \
 	ev.c \
+	icon-grid-old.c \
 	icon-grid.c \
 	panel.c \
 	plugin.c \
 	conf.c \
-	input-button.c
-
-liblxpanel_la_LDFLAGS = \
-	-no-undefined \
-	-version-info 0:0:0
-
-liblxpanel_la_LIBADD = \
-	$(PACKAGE_LIBS) \
-	$(KEYBINDER_LIBS) \
-	$(X11_LIBS)
+	$(MENU_SOURCES)
 
 lxpanel_includedir = $(includedir)/lxpanel
 lxpanel_include_HEADERS = \
@@ -49,13 +40,6 @@ lxpanel_include_HEADERS = \
 	icon-grid.h \
 	conf.h
 
-lxpanel_SOURCES = \
-	icon-grid-old.c \
-	bg.c \
-	gtk-run.c \
-	main.c \
-	$(MENU_SOURCES)
-
 if BUILD_PLUGIN_LOADER
 DYNAMIC_FLAGS = -export-dynamic
 endif
@@ -63,13 +47,13 @@ lxpanel_LDFLAGS = $(DYNAMIC_FLAGS)
 lxpanel_DEPENDENCIES_EXTRA = $(BUILTIN_PLUGINS)
 
 lxpanel_LDADD = \
-		liblxpanel.la \
 		$(BUILTIN_PLUGINS) \
 		$(PACKAGE_LIBS) \
-		$(X11_LIBS)
+		$(X11_LIBS) \
+		$(INTLLIBS)
 
 lxpanelctl_SOURCES = lxpanelctl.c lxpanelctl.h
-lxpanelctl_LDADD = $(X11_LIBS)
+lxpanelctl_LDADD = $(X11_LIBS) $(INTLLIBS)
 
 EXTRA_DIST = \
 	bg.h \
@@ -77,7 +61,6 @@ EXTRA_DIST = \
 	ev.h \
 	menu-policy.h \
 	icon-grid-old.h \
-	gtk-compat.h \
 	private.h
 
 $(top_builddir)/plugins/libbuiltin_plugins.a: $(lxpanel_include_HEADERS)
