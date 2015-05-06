@@ -1,4 +1,4 @@
-lxpanel (0.8.0-2.1) UNRELEASED; urgency=medium
+lxpanel (0.8.0-2linuxmint1) UNRELEASED; urgency=medium
 
   * Merge with Debian. Ubuntu remaining changes:
   * debian/control:
@@ -7,6 +7,7 @@ lxpanel (0.8.0-2.1) UNRELEASED; urgency=medium
      mixer on the sound applet. (LP: #957749).
    - Add indicator plugin binary.
    - Add build-depends on libicu-dev for weather plugin.
+   - Add new binary package liblxpanel.
   * debian/local/source_lxpanel.py:
    - Add apport hook.
   * debian/lxpanel.install:

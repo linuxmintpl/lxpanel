@@ -20,7 +20,7 @@ Vcs-Git: git://git.lxde.org/git/debian/lxpanel.git
 Package: lxpanel
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}, lxmenu-data,
- lxpanel-data (= ${source:Version}), libfm-modules
+ lxpanel-data (= ${source:Version}), libfm-modules, liblxpanel (= ${binary:Version})
 Recommends: xkb-data, xterm | pavucontrol | gnome-alsamixer
 Suggests: lxsession | menu, iceweasel | www-browser
 Description: LXDE panel
@@ -44,6 +44,15 @@ Description: LXDE panel
     For example, "lxpanelctl run" will show the Run dialog in lxpanel,
     and "lxpanelctl menu" will show the application menu. This is
     useful in combination with window manager key bindings.
+
+Package: liblxpanel
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: LXDE panel (runtime library)
+ LXPanel is a GUI application for the Lightweight X11 Desktop Environment
+ (LXDE).
+ .
+ This package contains the runtime library required for panel.
 
 Package: lxpanel-dbg
 Section: debug
